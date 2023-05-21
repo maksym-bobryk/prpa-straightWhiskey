@@ -1,7 +1,6 @@
 ﻿using PRPA.DBContext;
 using PRPA.Models;
 using PRPA.RepositoriesInterfaces;
-using System;
 
 namespace PRPA.Repositories
 {
@@ -42,5 +41,4 @@ namespace PRPA.Repositories
             _context.SaveChanges();
         }
     }
-
 }
