@@ -1,0 +1,51 @@
+.header {
+  background-size: cover;
+  background-position: center;
+  background-image: url("https://images.unsplash.com/photo-1592647420148-bfcc177e2117?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=839&q=80");
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+  }
+
+
+  &__call {
+    text-decoration: none;
+
+    @include onTablet {
+      &::before {
+        content: "+1 234 555-55-55";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-100%,-50%);
+
+        width: max-content;
+        padding-right: 8px;
+
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 16px;
+        color: $color-black;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        opacity: 0;
+        pointer-events: none;
+
+        transition: opacity 300ms;
+      }
+
+      &:hover::before {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
+}
