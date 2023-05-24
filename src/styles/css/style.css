@@ -840,43 +840,37 @@ a {
   background-size: cover;
   background-position: center;
   background-image: url("https://images.unsplash.com/photo-1592647420148-bfcc177e2117?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=839&q=80");
+  height: 100vh;
 }
 .header__content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   box-sizing: border-box;
-  height: 100vh;
+  height: max-content;
   width: 100%;
-  padding: 0;
+  padding: 220px 45px;
 }
-.header__call {
+.header__phrase {
+  color: #bebbba;
+  font-weight: 700;
+  font-size: 35px;
+}
+.header__enroll-button {
+  padding: 20px 50px;
+  margin-right: 50px;
+  transform: translateY(100%);
+  color: #bebbba;
+  background-color: rgba(41, 39, 39, 0.9);
+  font-size: 24px;
+  font-weight: 700;
   text-decoration: none;
+  border: 2px solid #bebbba;
+  transition: 0.3s;
 }
-@media (min-width: 744px) {
-  .header__call::before {
-    content: "+1 234 555-55-55";
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(-100%, -50%);
-    width: max-content;
-    padding-right: 8px;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 16px;
-    color: #292929;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 300ms;
-  }
-  .header__call:hover::before {
-    opacity: 1;
-    pointer-events: all;
-  }
+.header__enroll-button:hover {
+  color: #423025;
+  background-color: #d9d9d9;
 }
 
 .recommendation__photo-container {
@@ -1124,7 +1118,6 @@ a {
   text-decoration: none;
   font-size: 24px;
   font-weight: 700;
-  line-height: 30px;
 }
 
 .logo__image {
@@ -1138,10 +1131,21 @@ a {
   background-color: #17120d;
   display: flex;
   width: 100%;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 30px;
   align-items: center;
   padding: 5px 20px;
+  z-index: 1;
+}
+.top-actions__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.top-actions__login {
+  width: 50px;
+  height: 50px;
 }
 
 .footer {

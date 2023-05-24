@@ -2,50 +2,41 @@
   background-size: cover;
   background-position: center;
   background-image: url("https://images.unsplash.com/photo-1592647420148-bfcc177e2117?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=839&q=80");
+  height: 100vh;
 
   &__content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
 
     box-sizing: border-box;
-    height: 100vh;
+    height: max-content;
     width: 100%;
-    padding: 0;
+    padding: 220px 45px;
   }
 
+  &__phrase {
+    color: #bebbba;
+    font-weight: 700;
+    font-size: 35px;
+  }
 
-  &__call {
+  &__enroll-button {
+    padding: 20px 50px;
+    margin-right: 50px;
+    transform: translateY(100%);
+
+    color: #bebbba;
+    background-color: rgba(41,39,39, 0.9);
+    font-size: 24px;
+    font-weight: 700;
     text-decoration: none;
+    border: 2px solid #bebbba;
+    transition: 0.3s;
 
-    @include onTablet {
-      &::before {
-        content: "+1 234 555-55-55";
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translate(-100%,-50%);
-
-        width: max-content;
-        padding-right: 8px;
-
-        font-weight: 700;
-        font-size: 12px;
-        line-height: 16px;
-        color: $color-black;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        opacity: 0;
-        pointer-events: none;
-
-        transition: opacity 300ms;
-      }
-
-      &:hover::before {
-        opacity: 1;
-        pointer-events: all;
-      }
+    &:hover {
+      color: #423025;
+      background-color: #d9d9d9;
     }
   }
 }
