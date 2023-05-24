@@ -15,29 +15,29 @@ namespace PRPA.Repositories
 
         public IEnumerable<Role> GetAll()
         {
-            return _context.Roles.ToList();
+            return _context.Role.ToList();
         }
 
         public Role Get(int id)
         {
-            return _context.Roles.Find(id);
+            return _context.Role.Find(id);
         }
 
         public void Add(Role entity)
         {
-            _context.Roles.Add(entity);
+            _context.Role.Add(entity);
             _context.SaveChanges();
         }
 
         public void Update(Role entity)
         {
-            _context.Roles.Update(entity);
+            _context.Role.Update(entity);
             _context.SaveChanges();
         }
 
         public void Delete(Role entity)
         {
-            _context.Roles.Remove(entity);
+            _context.Role.Remove(entity);
             _context.SaveChanges();
         }
     }

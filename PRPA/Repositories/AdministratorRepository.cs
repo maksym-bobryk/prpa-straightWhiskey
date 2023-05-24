@@ -15,29 +15,29 @@ namespace PRPA.Repositories
 
         public IEnumerable<Administrator> GetAll()
         {
-            return _context.Administrators.ToList();
+            return _context.Administrator.ToList();
         }
 
         public Administrator Get(int id)
         {
-            return _context.Administrators.Find(id);
+            return _context.Administrator.Find(id);
         }
 
         public void Add(Administrator entity)
         {
-            _context.Administrators.Add(entity);
+            _context.Administrator.Add(entity);
             _context.SaveChanges();
         }
 
         public void Update(Administrator entity)
         {
-            _context.Administrators.Update(entity);
+            _context.Administrator.Update(entity);
             _context.SaveChanges();
         }
 
         public void Delete(Administrator entity)
         {
-            _context.Administrators.Remove(entity);
+            _context.Administrator.Remove(entity);
             _context.SaveChanges();
         }
     }

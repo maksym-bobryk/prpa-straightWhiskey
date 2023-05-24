@@ -15,29 +15,29 @@ namespace PRPA.Repositories
 
         public IEnumerable<Barber> GetAll()
         {
-            return _context.Barbers.ToList();
+            return _context.Barber.ToList();
         }
 
         public Barber Get(int id)
         {
-            return _context.Barbers.Find(id);
+            return _context.Barber.Find(id);
         }
 
         public void Add(Barber entity)
         {
-            _context.Barbers.Add(entity);
+            _context.Barber.Add(entity);
             _context.SaveChanges();
         }
 
         public void Update(Barber entity)
         {
-            _context.Barbers.Update(entity);
+            _context.Barber.Update(entity);
             _context.SaveChanges();
         }
 
         public void Delete(Barber entity)
         {
-            _context.Barbers.Remove(entity);
+            _context.Barber.Remove(entity);
             _context.SaveChanges();
         }
     }

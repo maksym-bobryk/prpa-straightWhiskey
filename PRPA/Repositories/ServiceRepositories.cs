@@ -15,29 +15,29 @@ namespace PRPA.Repositories
 
         public IEnumerable<Service> GetAll()
         {
-            return _context.Services.ToList();
+            return _context.Service.ToList();
         }
 
         public Service Get(int id)
         {
-            return _context.Services.Find(id);
+            return _context.Service.Find(id);
         }
 
         public void Add(Service entity)
         {
-            _context.Services.Add(entity);
+            _context.Service.Add(entity);
             _context.SaveChanges();
         }
 
         public void Update(Service entity)
         {
-            _context.Services.Update(entity);
+            _context.Service.Update(entity);
             _context.SaveChanges();
         }
 
         public void Delete(Service entity)
         {
-            _context.Services.Remove(entity);
+            _context.Service.Remove(entity);
             _context.SaveChanges();
         }
     }

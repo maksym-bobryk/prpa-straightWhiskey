@@ -15,29 +15,29 @@ namespace PRPA.Repositories
 
         public IEnumerable<AppointmentService> GetAll()
         {
-            return _context.AppointmentServices.ToList();
+            return _context.AppointmentService.ToList();
         }
 
         public AppointmentService Get(int id)
         {
-            return _context.AppointmentServices.Find(id);
+            return _context.AppointmentService.Find(id);
         }
 
         public void Add(AppointmentService entity)
         {
-            _context.AppointmentServices.Add(entity);
+            _context.AppointmentService.Add(entity);
             _context.SaveChanges();
         }
 
         public void Update(AppointmentService entity)
         {
-            _context.AppointmentServices.Update(entity);
+            _context.AppointmentService.Update(entity);
             _context.SaveChanges();
         }
 
         public void Delete(AppointmentService entity)
         {
-            _context.AppointmentServices.Remove(entity);
+            _context.AppointmentService.Remove(entity);
             _context.SaveChanges();
         }
     }

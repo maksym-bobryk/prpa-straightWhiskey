@@ -15,29 +15,29 @@ namespace PRPA.Repositories
 
         public IEnumerable<CosmeticsRequest> GetAll()
         {
-            return _context.CosmeticsRequests.ToList();
+            return _context.CosmeticsRequest.ToList();
         }
 
         public CosmeticsRequest Get(int id)
         {
-            return _context.CosmeticsRequests.Find(id);
+            return _context.CosmeticsRequest.Find(id);
         }
 
         public void Add(CosmeticsRequest entity)
         {
-            _context.CosmeticsRequests.Add(entity);
+            _context.CosmeticsRequest.Add(entity);
             _context.SaveChanges();
         }
 
         public void Update(CosmeticsRequest entity)
         {
-            _context.CosmeticsRequests.Update(entity);
+            _context.CosmeticsRequest.Update(entity);
             _context.SaveChanges();
         }
 
         public void Delete(CosmeticsRequest entity)
         {
-            _context.CosmeticsRequests.Remove(entity);
+            _context.CosmeticsRequest.Remove(entity);
             _context.SaveChanges();
         }
     }

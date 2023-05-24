@@ -15,29 +15,29 @@ namespace PRPA.Repositories
 
         public IEnumerable<Review> GetAll()
         {
-            return _context.Reviews.ToList();
+            return _context.Review.ToList();
         }
 
         public Review Get(int id)
         {
-            return _context.Reviews.Find(id);
+            return _context.Review.Find(id);
         }
 
         public void Add(Review entity)
         {
-            _context.Reviews.Add(entity);
+            _context.Review.Add(entity);
             _context.SaveChanges();
         }
 
         public void Update(Review entity)
         {
-            _context.Reviews.Update(entity);
+            _context.Review.Update(entity);
             _context.SaveChanges();
         }
 
         public void Delete(Review entity)
         {
-            _context.Reviews.Remove(entity);
+            _context.Review.Remove(entity);
             _context.SaveChanges();
         }
     }
