@@ -20,7 +20,7 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
-    options.UseSqlServer("Server=DESKTOP-49IUG3K;Initial Catalog=BarberShop;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=True;");
+    options.UseSqlServer("Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;");
 });
 
 var app = builder.Build();
