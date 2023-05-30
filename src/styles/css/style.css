@@ -21,6 +21,9 @@ a {
   font-weight: 400;
   scroll-behavior: smooth;
 }
+.page__body {
+  background-color: #8d8480;
+}
 .page__body--with-menu {
   overflow: hidden;
 }
@@ -53,26 +56,13 @@ a {
   }
 }
 .page__section-title {
-  margin-bottom: 48px;
+  padding: 96px 0;
   font-weight: 700;
-  font-size: 32px;
-  line-height: 32px;
+  font-size: 48px;
+  line-height: 48px;
   text-align: center;
   letter-spacing: -1.5px;
-  color: #292929;
-}
-@media (min-width: 744px) {
-  .page__section-title {
-    margin-bottom: 64px;
-    font-size: 40px;
-    line-height: 100%;
-  }
-}
-@media (min-width: 1260px) {
-  .page__section-title {
-    font-size: 48px;
-    line-height: 48px;
-  }
+  color: #fff;
 }
 
 .container {
@@ -929,19 +919,48 @@ a {
   }
 }
 
+.services__place {
+  background-image: url("https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1174&q=80");
+  background-position: 50% 70%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 30px;
+  height: 300px;
+}
+.services__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.services__container :first-child {
+  margin-bottom: 0;
+}
+.services__service {
+  display: flex;
+  width: 100vh;
+  height: 50px;
+  padding: 0 200px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+.services__title {
+  color: #fff;
+  font-size: 40px;
+  width: fit-content;
+}
+.services__name {
+  color: #fff;
+  font-size: 20px;
+}
+.services__cost {
+  color: #fff;
+  font-size: 20px;
+}
+
 .categories {
   overflow: hidden;
-}
-.categories__place {
-  margin-bottom: 40px;
-}
-@media (min-width: 744px) {
-  .categories__place {
-    margin-bottom: 64px;
-  }
-  .categories__place:last-child {
-    margin-bottom: 40px;
-  }
 }
 
 .why-to-buy__title {

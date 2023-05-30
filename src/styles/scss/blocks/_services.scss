@@ -1,0 +1,50 @@
+.services {
+  &__place {
+    background-image: url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1174&q=80');
+
+    background-position: 50% 70%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 30px;
+    height: 300px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    :first-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__service {
+    display: flex;
+    width: 100vh;
+    height: 50px;
+    padding: 0 200px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
+
+   
+  }
+
+  &__title {
+    color: #fff;
+    font-size: 40px;
+    width: fit-content;
+  }
+
+  &__name {
+    color: #fff;
+    font-size: 20px;
+  }
+
+  &__cost {
+    color: #fff;
+    font-size: 20px;
+  }
+}
