@@ -8,18 +8,18 @@ namespace PRPA.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly IUserRepository userRepos;
+        private readonly IUserRepository _userRepos;
          
         public UserController(IUserRepository userRepos)
         {
-            this.userRepos = userRepos;
+            this._userRepos = userRepos;
         }
 
         // GET: api/<UserController>
         [HttpGet]
         public IActionResult Get()
         {
-            var users = userRepos.GetAll();
+            var users = _userRepos.GetAll();
 
             if(users.Count() == 0)
             {
@@ -33,7 +33,7 @@ namespace PRPA.Controllers
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            var user = userRepos.Get(id);
+            var user = _userRepos.Get(id);
 
             if (user == null)
             {
@@ -52,7 +52,7 @@ namespace PRPA.Controllers
                 return NotFound();
             }
 
-            userRepos.Add(user);
+            _userRepos.Add(user);
 
             return CreatedAtAction(nameof(Get), new { userId = user.UserId }, user);
         }
@@ -61,7 +61,7 @@ namespace PRPA.Controllers
         [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody] User updatedUser)
         {
-            var user = userRepos.Get(id);
+            var user = _userRepos.Get(id);
 
             if (user.UserId < 0)
             {
@@ -82,14 +82,14 @@ namespace PRPA.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            User user = userRepos.Get(id);
+            User user = _userRepos.Get(id);
 
             if (user == null)
             {
                 return;
             }
 
-            userRepos.Delete(user);
+            _userRepos.Delete(user);
         }
     }
 }
