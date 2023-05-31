@@ -32,22 +32,6 @@
   &__section {
     margin-bottom: 120px;
 
-    &:nth-last-of-type(2) {
-      margin-bottom: 110px;
-    }
-
-    @include onTablet {
-      &:nth-last-of-type(2) {
-        margin-bottom: 100px;
-      }
-    }
-
-    @include onDesktop {
-      &:nth-last-of-type(2) {
-        margin-bottom: 120px;
-      }
-    }
-
   }
 
   &__section-title {

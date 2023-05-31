@@ -42,19 +42,6 @@ a {
 .page__section {
   margin-bottom: 120px;
 }
-.page__section:nth-last-of-type(2) {
-  margin-bottom: 110px;
-}
-@media (min-width: 744px) {
-  .page__section:nth-last-of-type(2) {
-    margin-bottom: 100px;
-  }
-}
-@media (min-width: 1260px) {
-  .page__section:nth-last-of-type(2) {
-    margin-bottom: 120px;
-  }
-}
 .page__section-title {
   padding: 96px 0;
   font-weight: 700;
@@ -1028,31 +1015,36 @@ a {
   color: #fff;
 }
 
-.contacts__info {
-  margin-bottom: 24px;
+.contacts__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 715px;
+  background-image: url("https://images.unsplash.com/photo-1628274459813-74bc7e2c53b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.contacts__info-title {
-  margin-bottom: 8px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 140%;
-  color: #9fadc2;
+.contacts__data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  gap: 20px;
+  z-index: 3;
 }
-.contacts__info-link {
+.contacts__link {
+  color: #fff;
   text-decoration: none;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 140%;
-  color: #3e3e3e;
+  font-size: 85px;
+  height: 100px;
+  line-height: 85px;
 }
-.contacts__field {
-  margin-bottom: 16px;
-}
-.contacts__field--last {
-  margin-bottom: 32px;
-}
-.contacts__button {
-  margin-bottom: 48px;
+.contacts__phone {
+  color: #fff;
+  text-decoration: none;
+  font-size: 35px;
+  line-height: 25px;
 }
 
 .form-field {
@@ -1168,20 +1160,15 @@ a {
 }
 
 .footer {
-  background-image: url(../images/footer.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 200px;
+  background-color: #17120D;
   background-size: cover;
   background-position: center;
-}
-@media (min-width: 744px) {
-  .footer {
-    height: 400px;
-  }
-}
-@media (min-width: 1260px) {
-  .footer {
-    height: 460px;
-  }
+  font-size: 20px;
+  color: #bebbba;
 }
 
 /*# sourceMappingURL=style.css.map */

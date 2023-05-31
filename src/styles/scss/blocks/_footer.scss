@@ -1,14 +1,13 @@
 .footer {
-  background-image: url(../images/footer.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 200px;
+  
+  background-color: #17120D;
   background-size: cover;
   background-position: center;
-
-  @include onTablet {
-    height: 400px;
-  }
-
-  @include onDesktop {
-    height: 460px;
-  }
+  
+  font-size: 20px;
+  color: #bebbba;
 }

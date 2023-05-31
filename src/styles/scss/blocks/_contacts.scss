@@ -1,33 +1,38 @@
 .contacts {
-  &__info {
-    margin-bottom: 24px;
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 715px;
+    background-image: url("https://images.unsplash.com/photo-1628274459813-74bc7e2c53b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
-  &__info-title {
-    margin-bottom: 8px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 140%;
-    color: #9fadc2;
+  &__data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    // top: 50%;
+    // left: 50%;
+    gap: 20px;
+    z-index: 3;
   }
 
-  &__info-link {
+  &__link {
+    color: #fff;
     text-decoration: none;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 140%;
-    color: #3e3e3e;
+    font-size: 85px;
+    height: 100px;
+    line-height: 85px;
   }
 
-  &__field {
-    margin-bottom: 16px;
-
-    &--last {
-      margin-bottom: 32px;
-    }
-  }
-
-  &__button {
-    margin-bottom: 48px;
+  &__phone {
+    color: #fff;
+    text-decoration: none;
+    font-size: 35px;
+    line-height: 25px;
   }
 }
