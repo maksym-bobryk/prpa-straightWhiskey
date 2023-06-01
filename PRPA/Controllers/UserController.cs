@@ -4,7 +4,7 @@ using PRPA.RepositoriesInterfaces;
 
 namespace PRPA.Controllers
 {
-    [Route("api/[controller]/[action]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase
     {
