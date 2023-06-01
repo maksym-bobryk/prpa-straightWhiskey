@@ -1,16 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\PRPA",
-    "\\PRPA\\Controllers",
-    "\\PRPA\\Views",
-    "\\PRPA\\Views\\Home",
-    "\\PRPA\\Views\\Shared",
-    "\\src",
-    "\\src\\styles",
-    "\\src\\styles\\scss",
-    "\\src\\styles\\scss\\blocks"
+    ""
   ],
-  "SelectedNode": "\\PRPA\\Controllers\\BarberController.cs",
+  "SelectedNode": "\\PRPA.sln",
   "PreviewInSolutionExplorer": false
 }

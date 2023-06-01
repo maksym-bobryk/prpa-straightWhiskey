@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Univ4\\прпа\\PRPAPROJ\\prpa-straightWhiskey\\PRPA\\PRPA.csproj": {}
+    "C:\\Users\\kvoln\\source\\repos\\prpa-straightWhiskey\\PRPA\\PRPA.csproj": {}
   },
   "projects": {
-    "C:\\Univ4\\прпа\\PRPAPROJ\\prpa-straightWhiskey\\PRPA\\PRPA.csproj": {
+    "C:\\Users\\kvoln\\source\\repos\\prpa-straightWhiskey\\PRPA\\PRPA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Univ4\\прпа\\PRPAPROJ\\prpa-straightWhiskey\\PRPA\\PRPA.csproj",
+        "projectUniqueName": "C:\\Users\\kvoln\\source\\repos\\prpa-straightWhiskey\\PRPA\\PRPA.csproj",
         "projectName": "PRPA",
-        "projectPath": "C:\\Univ4\\прпа\\PRPAPROJ\\prpa-straightWhiskey\\PRPA\\PRPA.csproj",
-        "packagesPath": "C:\\Users\\Kseniia\\.nuget\\packages\\",
-        "outputPath": "C:\\Univ4\\прпа\\PRPAPROJ\\prpa-straightWhiskey\\PRPA\\obj\\",
+        "projectPath": "C:\\Users\\kvoln\\source\\repos\\prpa-straightWhiskey\\PRPA\\PRPA.csproj",
+        "packagesPath": "C:\\Users\\kvoln\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kvoln\\source\\repos\\prpa-straightWhiskey\\PRPA\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Kseniia\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\kvoln\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -52,7 +48,7 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.0-preview.4.23259.3, )"
+              "version": "[7.0.5, )"
             }
           },
           "imports": [
@@ -61,7 +57,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -73,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
