@@ -3,8 +3,8 @@
     public class Appointment
     {
         public int AppointmentId { get; set; }
-        public int BarberId { get; set; }
-        public int UserId { get; set; }
+        public Barber Barber { get; set; }
+        public Client Client { get; set; }
         public DateTime AppointmentTime { get; set; }
     }
 }

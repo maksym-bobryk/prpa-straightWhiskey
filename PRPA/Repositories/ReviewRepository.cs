@@ -1,4 +1,5 @@
-﻿using PRPA.DBContext;
+﻿using Microsoft.EntityFrameworkCore;
+using PRPA.DBContext;
 using PRPA.Models;
 using PRPA.RepositoriesInterfaces;
 
@@ -15,12 +16,23 @@ namespace PRPA.Repositories
 
         public IEnumerable<Review> GetAll()
         {
-            return _context.Review.ToList();
+            return _context.Review.Include(b => b.Appointment).ToList();
         }
 
         public Review Get(int id)
         {
-            return _context.Review.Find(id);
+            return _context.Review.Where(b => b.ReviewId == id).Include(b => b.Appointment).FirstOrDefault();
+        }
+
+        public IEnumerable<Review> GetReviewsForBarber(int barberId)
+        {
+            var reviews = _context.Review
+            .Where(p => p.Appointment.Barber.BarberId == barberId)
+            .Include(b => b.Appointment.Barber)
+            .Include(b => b.Appointment.Client)
+            .ToList();
+
+            return reviews;
         }
 
         public void Add(Review entity)

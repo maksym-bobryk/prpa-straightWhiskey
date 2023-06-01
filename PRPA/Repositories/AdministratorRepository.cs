@@ -1,4 +1,5 @@
-﻿using PRPA.DBContext;
+﻿using Microsoft.EntityFrameworkCore;
+using PRPA.DBContext;
 using PRPA.Models;
 using PRPA.RepositoriesInterfaces;
 
@@ -15,12 +16,12 @@ namespace PRPA.Repositories
 
         public IEnumerable<Administrator> GetAll()
         {
-            return _context.Administrator.ToList();
+            return _context.Administrator.Include(b => b.User).ToList();
         }
 
         public Administrator Get(int id)
         {
-            return _context.Administrator.Find(id);
+            return _context.Administrator.Where(b => b.AdministratorId == id).Include(b => b.User).FirstOrDefault();
         }
 
         public void Add(Administrator entity)

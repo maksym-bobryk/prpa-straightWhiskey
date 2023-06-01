@@ -73,7 +73,7 @@ namespace PRPA.Controllers
             user.Name = updatedUser.Name;
             user.Phone = updatedUser.Phone;
             user.Photo = updatedUser.Photo;
-            user.RoleId = updatedUser.RoleId;
+            user.Role = updatedUser.Role;
 
             return NoContent();
         }

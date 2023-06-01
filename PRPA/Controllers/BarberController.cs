@@ -9,10 +9,14 @@ namespace PRPA.Controllers
     public class BarberController : ControllerBase
     {
         private readonly IBarberRepository _barberRepos;
+        private readonly IAppointmentRepository _appointmentRepos;
+        private readonly IReviewRepository _reviewRepos;
 
-        public BarberController(IBarberRepository barberRepos)
+        public BarberController(IBarberRepository barberRepos, IAppointmentRepository appointmentRepos, IReviewRepository reviewRepos)
         {
             this._barberRepos = barberRepos;
+            this._appointmentRepos = appointmentRepos;
+            this._reviewRepos = reviewRepos;
         }
 
         // GET: api/<UserController>
@@ -42,6 +46,28 @@ namespace PRPA.Controllers
 
             return Ok(barber);
         }
+
+        // GET api/<UserController>/
+        [HttpGet("{id}/reviews")]
+        public IActionResult GetAllReviewsOfBarber(int id)
+        {
+            try
+            {
+                var reviews = _reviewRepos.GetReviewsForBarber(id);
+
+                if (reviews == null || !reviews.Any())
+                {
+                    return NotFound();
+                }
+
+                return Ok(reviews);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"An error occurred: {ex.Message}");
+            }
+        }
+
 
         // POST api/<UserController>
         [HttpPost]

@@ -4,6 +4,6 @@
     {
         public int BarberId { get; set; }
         public decimal Earnings { get; set; }
-        public int UserID { get; set; }
+        public User User { get; set; }
     }
 }

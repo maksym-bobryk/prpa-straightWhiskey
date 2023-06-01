@@ -1,4 +1,5 @@
-﻿using PRPA.DBContext;
+﻿using Microsoft.EntityFrameworkCore;
+using PRPA.DBContext;
 using PRPA.Models;
 using PRPA.RepositoriesInterfaces;
 
@@ -15,12 +16,12 @@ namespace PRPA.Repositories
 
         public IEnumerable<User> GetAll()
         {
-            return _context.User.ToList();
+            return _context.User.Include(b => b.Role).ToList();
         }
 
         public User Get(int id)
         {
-            return _context.User.Find(id);
+            return _context.User.Where(b => b.UserId == id).Include(b => b.Role).FirstOrDefault();
         }
 
         public void Add(User entity)

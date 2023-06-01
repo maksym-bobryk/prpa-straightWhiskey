@@ -1,4 +1,5 @@
-﻿using PRPA.DBContext;
+﻿using Microsoft.EntityFrameworkCore;
+using PRPA.DBContext;
 using PRPA.Models;
 using PRPA.RepositoriesInterfaces;
 
@@ -15,12 +16,12 @@ namespace PRPA.Repositories
 
         public IEnumerable<CosmeticsRequest> GetAll()
         {
-            return _context.CosmeticsRequest.ToList();
+            return _context.CosmeticsRequest.Include(b => b.Barber).ToList();
         }
 
         public CosmeticsRequest Get(int id)
         {
-            return _context.CosmeticsRequest.Find(id);
+            return _context.CosmeticsRequest.Where(b => b.CosmeticsRequestId == id).Include(b => b.Barber).FirstOrDefault();
         }
 
         public void Add(CosmeticsRequest entity)

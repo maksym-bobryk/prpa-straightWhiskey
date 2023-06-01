@@ -71,7 +71,7 @@ namespace PRPA.Controllers
             review.Rating = updatedReview.Rating;
             review.Text = updatedReview.Text;
             review.Photo = updatedReview.Photo;
-            review.AppointmentId = updatedReview.AppointmentId;
+            review.Appointment = updatedReview.Appointment;
             return NoContent();
         }
 

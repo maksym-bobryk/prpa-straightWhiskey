@@ -1,6 +1,7 @@
 ﻿using PRPA.DBContext;
 using PRPA.Models;
 using PRPA.RepositoriesInterfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace PRPA.Repositories
 {
@@ -15,12 +16,12 @@ namespace PRPA.Repositories
 
         public IEnumerable<Appointment> GetAll()
         {
-            return _context.Appointment.ToList();
+            return _context.Appointment.Include(b => b.Barber).Include(b => b.Client).ToList();
         }
 
         public Appointment Get(int id)
         {
-            return _context.Appointment.Find(id);
+            return _context.Appointment.Where(b => b.AppointmentId == id).Include(b => b.Barber).Include(b => b.Client).FirstOrDefault();
         }
 
         public void Add(Appointment entity)
