@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kvoln\\source\\repos\\prpa-straightWhiskey\\PRPA\\PRPA.csproj": {}
+    "E:\\prpa-straightWhiskey\\prpa-straightWhiskey\\PRPA\\PRPA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kvoln\\source\\repos\\prpa-straightWhiskey\\PRPA\\PRPA.csproj": {
+    "E:\\prpa-straightWhiskey\\prpa-straightWhiskey\\PRPA\\PRPA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kvoln\\source\\repos\\prpa-straightWhiskey\\PRPA\\PRPA.csproj",
+        "projectUniqueName": "E:\\prpa-straightWhiskey\\prpa-straightWhiskey\\PRPA\\PRPA.csproj",
         "projectName": "PRPA",
-        "projectPath": "C:\\Users\\kvoln\\source\\repos\\prpa-straightWhiskey\\PRPA\\PRPA.csproj",
-        "packagesPath": "C:\\Users\\kvoln\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kvoln\\source\\repos\\prpa-straightWhiskey\\PRPA\\obj\\",
+        "projectPath": "E:\\prpa-straightWhiskey\\prpa-straightWhiskey\\PRPA\\PRPA.csproj",
+        "packagesPath": "C:\\Users\\ipavl\\.nuget\\packages\\",
+        "outputPath": "E:\\prpa-straightWhiskey\\prpa-straightWhiskey\\PRPA\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\kvoln\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ipavl\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -57,8 +57,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -70,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

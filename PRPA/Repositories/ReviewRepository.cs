@@ -28,6 +28,7 @@ namespace PRPA.Repositories
         {
             var reviews = _context.Review
             .Where(p => p.Appointment.Barber.BarberId == barberId)
+            .Include(b => b.Appointment)
             .Include(b => b.Appointment.Barber)
             .Include(b => b.Appointment.Client)
             .ToList();
