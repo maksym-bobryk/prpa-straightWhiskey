@@ -16,12 +16,12 @@ namespace PRPA.Repositories
 
         public IEnumerable<Appointment> GetAll()
         {
-            return _context.Appointment.Include(b => b.Barber).Include(b => b.Client).ToList();
+            return _context.Appointment.Include(b => b.Barber).Include(b => b.Client).Include(x => x.Services).ToList();
         }
 
         public Appointment Get(int id)
         {
-            return _context.Appointment.Where(b => b.AppointmentId == id).Include(b => b.Barber).Include(b => b.Client).FirstOrDefault();
+            return _context.Appointment.Where(b => b.AppointmentId == id).Include(b => b.Barber).Include(b => b.Client).Include(x => x.Services).FirstOrDefault();
         }
 
         public void Add(Appointment entity)
