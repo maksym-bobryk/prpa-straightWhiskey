@@ -6,5 +6,6 @@
         public Barber Barber { get; set; }
         public Client Client { get; set; }
         public DateTime AppointmentTime { get; set; }
+        public List<Service> Services { get; set; }
     }
 }
