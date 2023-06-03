@@ -29,32 +29,61 @@ namespace PRPA.Controllers
             return Ok(users);
         }
 
-        // GET api/<UserController>/5
-        [HttpGet("id/{id}")]
-        public IActionResult Get(int id)
+        [HttpGet("{idOrEmail}")]
+        public IActionResult Get(string idOrEmail)
         {
-            var user = _userRepos.Get(id);
-
-            if (user == null)
+            int id;
+            if (int.TryParse(idOrEmail, out id))
             {
-                return NotFound();
-            }
+                var user = _userRepos.Get(id);
 
-            return Ok(user);
+                if (user == null)
+                {
+                    return NotFound();
+                }
+
+                return Ok(user);
+            }
+            else
+            {
+                var client = _userRepos.Get(idOrEmail);
+
+                if (client == null)
+                {
+                    return NotFound();
+                }
+
+                return Ok(client);
+            }
         }
 
-        [HttpGet("email/{email}")]
-        public IActionResult Get(string email)
-        {
-            var user = _userRepos.Get(email);
 
-            if (user == null)
-            {
-                return NotFound();
-            }
+        /*        // GET api/<UserController>/5
+                [HttpGet("id/{id}")]
+                public IActionResult Get(int id)
+                {
+                    var user = _userRepos.Get(id);
 
-            return Ok(user);
-        }
+                    if (user == null)
+                    {
+                        return NotFound();
+                    }
+
+                    return Ok(user);
+                }
+
+                [HttpGet("email/{email}")]
+                public IActionResult Get(string email)
+                {
+                    var user = _userRepos.Get(email);
+
+                    if (user == null)
+                    {
+                        return NotFound();
+                    }
+
+                    return Ok(user);
+                }*/
 
         // POST api/<UserController>
         [HttpPost]

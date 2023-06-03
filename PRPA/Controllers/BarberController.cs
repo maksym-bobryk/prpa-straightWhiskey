@@ -33,32 +33,60 @@ namespace PRPA.Controllers
             return Ok(barbers);
         }
 
-        // GET api/<UserController>/5
-        [HttpGet("id/{id}}")]
-        public IActionResult Get(int id)
+        [HttpGet("{idOrEmail}")]
+        public IActionResult Get(string idOrEmail)
         {
-            var barber = _barberRepos.Get(id);
-
-            if (barber == null)
+            int id;
+            if (int.TryParse(idOrEmail, out id))
             {
-                return NotFound();
-            }
+                var barber = _barberRepos.Get(id);
 
-            return Ok(barber);
+                if (barber == null)
+                {
+                    return NotFound();
+                }
+
+                return Ok(barber);
+            }
+            else
+            {
+                var client = _barberRepos.Get(idOrEmail);
+
+                if (client == null)
+                {
+                    return NotFound();
+                }
+
+                return Ok(client);
+            }
         }
 
-        [HttpGet("email/{email}")]
-        public IActionResult Get(string email)
-        {
-            var barber = _barberRepos.Get(email);
+        /*        // GET api/<UserController>/5
+                [HttpGet("id/{id}}")]
+                public IActionResult Get(int id)
+                {
+                    var barber = _barberRepos.Get(id);
 
-            if (barber == null)
-            {
-                return NotFound();
-            }
+                    if (barber == null)
+                    {
+                        return NotFound();
+                    }
 
-            return Ok(barber);
-        }
+                    return Ok(barber);
+                }
+
+                [HttpGet("email/{email}")]
+                public IActionResult Get(string email)
+                {
+                    var barber = _barberRepos.Get(email);
+
+                    if (barber == null)
+                    {
+                        return NotFound();
+                    }
+
+                    return Ok(barber);
+                }*/
 
         // GET api/<UserController>/
         [HttpGet("{id}/reviews")]

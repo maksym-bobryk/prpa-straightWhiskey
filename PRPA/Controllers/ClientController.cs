@@ -29,32 +29,60 @@ namespace PRPA.Controllers
             return Ok(client);
         }
 
-        // GET api/<UserController>/5
-        [HttpGet("id/{id}")]
-        public IActionResult Get(int id)
+        [HttpGet("{idOrEmail}")]
+        public IActionResult Get(string idOrEmail)
         {
-            var client = _clientRepos.Get(id);
-
-            if (client == null)
+            int id;
+            if (int.TryParse(idOrEmail, out id))
             {
-                return NotFound();
-            }
+                var client = _clientRepos.Get(id);
 
-            return Ok(client);
+                if (client == null)
+                {
+                    return NotFound();
+                }
+
+                return Ok(client);
+            }
+            else
+            {
+                var client = _clientRepos.Get(idOrEmail);
+
+                if (client == null)
+                {
+                    return NotFound();
+                }
+
+                return Ok(client);
+            }
         }
 
-        [HttpGet("email/{email}")]
-        public IActionResult Get(string email)
-        {
-            var client = _clientRepos.Get(email);
+        /*        // GET api/<UserController>/5
+                [HttpGet("id/{id}")]
+                public IActionResult Get(int id)
+                {
+                    var client = _clientRepos.Get(id);
 
-            if (client == null)
-            {
-                return NotFound();
-            }
+                    if (client == null)
+                    {
+                        return NotFound();
+                    }
 
-            return Ok(client);
-        }
+                    return Ok(client);
+                }
+
+                [HttpGet("email/{email}")]
+                public IActionResult Get(string email)
+                {
+                    var client = _clientRepos.Get(email);
+
+                    if (client == null)
+                    {
+                        return NotFound();
+                    }
+
+                    return Ok(client);
+                }*/
 
         // POST api/<UserController>
         [HttpPost]
