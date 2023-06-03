@@ -3,6 +3,7 @@
     public class Role
     {
         public int RoleId { get; set; }
-        public int AccessFlag { get; set; } 
+
+        public int AccessFlags { get; set; } 
     }
 }
