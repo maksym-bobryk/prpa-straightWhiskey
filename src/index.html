@@ -15,9 +15,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
-    <script src="scripts/main.js" defer></script>
+
   </head>
   <body class="page__body">
+
+    <div class="auth">
+      <h1>Sign in</h1>
+      <button onclick="signIn()">Sign in With Google</button>
+    </div>
+
     <div class="top-actions">
       <div class="top-actions__container">
         <a href="#" class="logo">
@@ -36,7 +42,7 @@
         
         <a href="#contacts" class="icon icon--phone header__call">Сontacts</a>
         
-        <a href="#" class="icon icon--phone header__call">About Us</a>
+        <a href="./profile.html" class="icon icon--phone header__call">About Us</a>
       </div>
       
       <a href="#" class="icon">
@@ -389,13 +395,6 @@
     <footer class="footer">
       Staight Whiskey
     </footer>
-
-
-    
-    <script>
-      AOS.init();
-      </script>
-
+    <script src="script.js"></script>
 </body>
-  <script src="./script.js"></script>
 </html>
