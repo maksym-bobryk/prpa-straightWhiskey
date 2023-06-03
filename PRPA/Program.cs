@@ -10,7 +10,6 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddCors();
 builder.Services.AddScoped<IAdministratorRepository, AdministratorRepository>();
 builder.Services.AddScoped<IAppointmentRepository, AppointmentRepository>();
-builder.Services.AddScoped<IAppointmentServiceRepository, AppointmentServiceRepository>();
 builder.Services.AddScoped<IBarberRepository, BarberRepository>();
 builder.Services.AddScoped<IClientRepository, ClientRepository>();
 builder.Services.AddScoped<ICosmeticsRequestRepository, CosmeticsRequestRepository>();
