@@ -89,10 +89,10 @@ namespace PRPA.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] User user)
         {
-            if(user.UserId < 0)
+/*            if(user.UserId < 0)
             {
                 return NotFound();
-            }
+            }*/
 
             _userRepos.Add(user);
 
