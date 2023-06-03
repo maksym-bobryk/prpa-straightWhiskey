@@ -88,10 +88,10 @@ namespace PRPA.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] Client client)
         {
-            if (client.ClientId < 0)
+/*            if (client.ClientId < 0)
             {
                 return NotFound();
-            }
+            }*/
 
             _clientRepos.Add(client);
 
