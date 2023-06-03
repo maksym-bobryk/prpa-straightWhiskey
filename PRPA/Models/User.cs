@@ -1,4 +1,6 @@
-﻿namespace PRPA.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace PRPA.Models
 {
     public class User
     {
@@ -8,6 +10,8 @@
         public string Name { get; set; }
         public string Phone { get; set; }
         public string Photo { get; set; }
+
+        [ForeignKey("RoleId")]
         public Role Role { get; set; }
     }
 }

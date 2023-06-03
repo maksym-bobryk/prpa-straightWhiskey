@@ -1,4 +1,6 @@
-﻿namespace PRPA.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace PRPA.Models
 {
     public class Service
     {
@@ -7,6 +9,8 @@
         public int Duration { get; set; }
         public decimal Cost { get; set; }
         public string Description { get; set; }
+
+        [ForeignKey("AppointmentId")]
         public List<Appointment> Appointments { get; set; }
     }
 }

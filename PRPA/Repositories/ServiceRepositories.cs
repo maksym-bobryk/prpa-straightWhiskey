@@ -16,7 +16,10 @@ namespace PRPA.Repositories
 
         public IEnumerable<Service> GetAll()
         {
-            return _context.Service.Include(x => x.Appointments).ToList();
+            return _context.Service
+                .Include(x => x.Appointments).ThenInclude(x => x.Client)
+                .Include(x => x.Appointments).ThenInclude(x => x.Barber)
+                .ToList();
         }
 
         public Service Get(int id)

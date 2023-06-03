@@ -1,4 +1,6 @@
-﻿namespace PRPA.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace PRPA.Models
 {
     public class Review
     {
@@ -6,6 +8,8 @@
         public int Rating { get; set; }        
         public string Text { get; set; }        
         public string Photo {get; set; }
+
+        [ForeignKey("AppointmentId")]
         public Appointment Appointment { get; set; }
     }
 }
