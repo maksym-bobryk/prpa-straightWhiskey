@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace PRPA.Models
 {
@@ -11,6 +12,7 @@ namespace PRPA.Models
         public string Description { get; set; }
 
         [ForeignKey("AppointmentId")]
+        [JsonIgnore]
         public List<Appointment> Appointments { get; set; }
     }
 }
