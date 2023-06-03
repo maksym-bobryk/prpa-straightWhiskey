@@ -13,7 +13,6 @@ namespace PRPA.DBContext
         public DbSet<Role> Role { get; set; }
         public DbSet<Administrator> Administrator { get; set; }
         public DbSet<Appointment> Appointment { get; set; }
-        public DbSet<AppointmentService> AppointmentService { get; set; }
         public DbSet<Client> Client { get; set; }
         public DbSet<Service> Service { get; set; }
         public DbSet<User> User { get; set; }
