@@ -30,7 +30,7 @@ namespace PRPA.Controllers
         }
 
         // GET api/<UserController>/5
-        [HttpGet("{id}")]
+        [HttpGet("id/{id}")]
         public IActionResult Get(int id)
         {
             var user = _userRepos.Get(id);
@@ -43,7 +43,7 @@ namespace PRPA.Controllers
             return Ok(user);
         }
 
-        [HttpGet("{email}")]
+        [HttpGet("email/{email}")]
         public IActionResult Get(string email)
         {
             var user = _userRepos.Get(email);
