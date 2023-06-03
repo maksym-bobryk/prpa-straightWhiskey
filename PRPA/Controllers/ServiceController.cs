@@ -72,6 +72,7 @@ namespace PRPA.Controllers
             service.Duration = updatedService.Duration;
             service.Cost = updatedService.Cost;
             service.Description = updatedService.Description;
+            service.Appointments = updatedService.Appointments;
             return NoContent();
         }
 

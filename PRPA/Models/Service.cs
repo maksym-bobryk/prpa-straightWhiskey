@@ -7,5 +7,6 @@
         public int Duration { get; set; }
         public decimal Cost { get; set; }
         public string Description { get; set; }
+        public List<Appointment> Appointments { get; set; }
     }
 }
