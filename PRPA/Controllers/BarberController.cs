@@ -47,6 +47,19 @@ namespace PRPA.Controllers
             return Ok(barber);
         }
 
+        [HttpGet("{email}")]
+        public IActionResult Get(string email)
+        {
+            var barber = _barberRepos.Get(email);
+
+            if (barber == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(barber);
+        }
+
         // GET api/<UserController>/
         [HttpGet("{id}/reviews")]
         public IActionResult GetAllReviewsOfBarber(int id)

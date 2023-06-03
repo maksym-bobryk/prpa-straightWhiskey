@@ -43,6 +43,19 @@ namespace PRPA.Controllers
             return Ok(user);
         }
 
+        [HttpGet("{email}")]
+        public IActionResult Get(string email)
+        {
+            var user = _userRepos.Get(email);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(user);
+        }
+
         // POST api/<UserController>
         [HttpPost]
         public IActionResult Post([FromBody] User user)

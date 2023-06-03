@@ -3,6 +3,7 @@ using PRPA.RepositoriesInterfaces;
 using PRPA.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Authentication.Google;
 
 var builder = WebApplication.CreateBuilder(args);
 
