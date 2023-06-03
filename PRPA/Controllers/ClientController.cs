@@ -6,27 +6,27 @@ namespace PRPA.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserController : ControllerBase
+    public class ClientController : ControllerBase
     {
-        private readonly IUserRepository _userRepos;
-         
-        public UserController(IUserRepository userRepos)
+        private readonly IClientRepository _clientRepos;
+
+        public ClientController(IClientRepository clientRepos)
         {
-            this._userRepos = userRepos;
+            this._clientRepos = clientRepos;
         }
 
         // GET: api/<UserController>
         [HttpGet]
         public IActionResult Get()
         {
-            var users = _userRepos.GetAll();
+            var client = _clientRepos.GetAll();
 
-            if(users.Count() == 0)
+            if (client.Count() == 0)
             {
                 return NotFound();
             }
 
-            return Ok(users);
+            return Ok(client);
         }
 
         [HttpGet("{idOrEmail}")]
@@ -35,18 +35,18 @@ namespace PRPA.Controllers
             int id;
             if (int.TryParse(idOrEmail, out id))
             {
-                var user = _userRepos.Get(id);
+                var client = _clientRepos.Get(id);
 
-                if (user == null)
+                if (client == null)
                 {
                     return NotFound();
                 }
 
-                return Ok(user);
+                return Ok(client);
             }
             else
             {
-                var client = _userRepos.Get(idOrEmail);
+                var client = _clientRepos.Get(idOrEmail);
 
                 if (client == null)
                 {
@@ -57,66 +57,59 @@ namespace PRPA.Controllers
             }
         }
 
-
         /*        // GET api/<UserController>/5
                 [HttpGet("id/{id}")]
                 public IActionResult Get(int id)
                 {
-                    var user = _userRepos.Get(id);
+                    var client = _clientRepos.Get(id);
 
-                    if (user == null)
+                    if (client == null)
                     {
                         return NotFound();
                     }
 
-                    return Ok(user);
+                    return Ok(client);
                 }
 
                 [HttpGet("email/{email}")]
                 public IActionResult Get(string email)
                 {
-                    var user = _userRepos.Get(email);
+                    var client = _clientRepos.Get(email);
 
-                    if (user == null)
+                    if (client == null)
                     {
                         return NotFound();
                     }
 
-                    return Ok(user);
+                    return Ok(client);
                 }*/
 
         // POST api/<UserController>
         [HttpPost]
-        public IActionResult Post([FromBody] User user)
+        public IActionResult Post([FromBody] Client client)
         {
-/*            if(user.UserId < 0)
+/*            if (client.ClientId < 0)
             {
                 return NotFound();
             }*/
 
-            _userRepos.Add(user);
+            _clientRepos.Add(client);
 
-            return CreatedAtAction(nameof(Get), new { userId = user.UserId }, user);
+            return CreatedAtAction(nameof(Get), new { userId = client.ClientId }, client);
         }
 
         // PUT api/<UserController>/5
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] User updatedUser)
+        public IActionResult Put(int id, [FromBody] Client updatedClient)
         {
-            var user = _userRepos.Get(id);
+            var client = _clientRepos.Get(id);
 
-            if (user.UserId < 0)
+            if (client.ClientId < 0)
             {
                 return NotFound();
             }
 
-            user.Email = updatedUser.Email;
-            user.Password = updatedUser.Password;
-            user.Name = updatedUser.Name;
-            user.Phone = updatedUser.Phone;
-            user.Photo = updatedUser.Photo;
-            user.Role = updatedUser.Role;
-
+            client.User = updatedClient.User;
             return NoContent();
         }
 
@@ -124,14 +117,14 @@ namespace PRPA.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            User user = _userRepos.Get(id);
+            Client client = _clientRepos.Get(id);
 
-            if (user == null)
+            if (client == null)
             {
                 return;
             }
 
-            _userRepos.Delete(user);
+            _clientRepos.Delete(client);
         }
     }
 }

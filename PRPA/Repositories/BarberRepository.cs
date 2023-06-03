@@ -24,6 +24,11 @@ namespace PRPA.Repositories
             return _context.Barber.Where(b => b.BarberId == id).Include(b => b.User).FirstOrDefault();
         }
 
+        public Barber Get(string email)
+        {
+            return _context.Barber.Where(x => x.User.Email == email).Include(x => x.User).FirstOrDefault();
+        }
+
         public void Add(Barber entity)
         {
             _context.Barber.Add(entity);

@@ -24,6 +24,11 @@ namespace PRPA.Repositories
             return _context.Client.Where(b => b.ClientId == id).Include(b => b.User).FirstOrDefault();
         }
 
+        public Client Get(string email)
+        {
+            return _context.Client.Where(x => x.User.Email == email).Include(x => x.User).FirstOrDefault();
+        }
+
         public void Add(Client entity)
         {
             _context.Client.Add(entity);
