@@ -26,7 +26,7 @@ namespace PRPA.Repositories
 
         public Administrator Get(string email)
         {
-            return _context.Administrator.Where(x => x.User.Email == email).Include(x => x.User).FirstOrDefault();
+            return _context.Administrator.Where(x => x.User.Email == email).Include(x => x.User).ThenInclude(b => b.Role).FirstOrDefault();
         }
 
 
