@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\prpa-straightWhiskey\\prpa-straightWhiskey\\PRPA\\PRPA.csproj": {}
+    "C:\\university\\p\\prpa-straightWhiskey\\PRPA\\PRPA.csproj": {}
   },
   "projects": {
-    "E:\\prpa-straightWhiskey\\prpa-straightWhiskey\\PRPA\\PRPA.csproj": {
+    "C:\\university\\p\\prpa-straightWhiskey\\PRPA\\PRPA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\prpa-straightWhiskey\\prpa-straightWhiskey\\PRPA\\PRPA.csproj",
+        "projectUniqueName": "C:\\university\\p\\prpa-straightWhiskey\\PRPA\\PRPA.csproj",
         "projectName": "PRPA",
-        "projectPath": "E:\\prpa-straightWhiskey\\prpa-straightWhiskey\\PRPA\\PRPA.csproj",
-        "packagesPath": "C:\\Users\\ipavl\\.nuget\\packages\\",
-        "outputPath": "E:\\prpa-straightWhiskey\\prpa-straightWhiskey\\PRPA\\obj\\",
+        "projectPath": "C:\\university\\p\\prpa-straightWhiskey\\PRPA\\PRPA.csproj",
+        "packagesPath": "C:\\Users\\maxii\\.nuget\\packages\\",
+        "outputPath": "C:\\university\\p\\prpa-straightWhiskey\\PRPA\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ipavl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\maxii\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -61,7 +61,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -73,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

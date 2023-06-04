@@ -26,11 +26,21 @@ fetch('https://localhost:7061/api/User/')
     localStorage.setItem('userEmail', userObject.email);
     localStorage.setItem('userPic', userObject.picture);
     
-    window.location.href = './profile.html';
+    // window.location.href = './profile.html';let newUser = {
+      let newUser = {
+      "Email": userObject.email,
+      "Name": userObject.name,
+      "Photo": userObject.picture,
+      "Role": {
+        "RoleId": 1,
+        "AccessFlags": 1
+      }
+    }
+
 
     console.log(userObject, userObject.name);
 
-    fetch('https://localhost:7061/api/Client', {
+    fetch('https://localhost:7061/api/User', {
       method: 'POST',
       body: JSON.stringify (newUser),
       headers: {
