@@ -16,86 +16,20 @@ fetch('https://localhost:7061/api/User/')
   }
 )
 
-  // function handleLogin(resp) {
-  //   console.log(resp.credential); 
-  //   let userObject = jwt_decode(resp.credential);
-    
-  //   let newUser = {
-  //     email: userObject.email,
-  //     name: userObject.name,
-  //     password: null,
-  //     phone: null,
-  //     photo: userObject.picture, 
-  //     role: {
-  //       roleId: 2,
-  //       accessFlags: 2,
-  //     },
-  //   }
-
-  //   fetch('https://localhost:7061/api/User/', {
-  //     method: 'POST', 
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //     },
-  //     body: JSON.stringify(newUser),
-  //   })
-  //   .then(response => {
-  //     if (!response.ok) {
-  //       throw new Error(`HTTP error! status: ${response.status}`);
-  //     }
-      
-  //     return response.json();
-  //   })
-  //   .then(data => console.log('Success:', data))
-  //   .catch((error) => console.error('Error:', error));
-
-  //   console.log(userObject, userObject.name);
-  // }
-
   function handleLogin(resp) {
     console.log(resp.credential); 
     let userObject = jwt_decode(resp.credential);
+
+    localStorage.setItem('userName', userObject.name);
+    localStorage.setItem('userEmail', userObject.email);
+    localStorage.setItem('userPic', userObject.picture);
     
-    let newUser = {
-      Email: userObject.email,
-      Name: userObject.name,
-      Password: null,
-      Phone: null,
-      Photo: userObject.picture,
-      RoleID: null // Assumed role ID, modify as needed
-    };
+    window.location.href = './profile.html';
 
-    fetch('https://localhost:7061/api/User', {
-      method: 'POST', 
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(user),
-    })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then(data => console.log('Success:', data))
-    .catch((error) => console.error('Error:', error));
-}
+    console.log(userObject, userObject.name);
+  }
 
-function postUserData(user) {
-  fetch('https://localhost:7061/api/User', {
-    method: 'POST', 
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(user),
-  })
-  .then(response => {
-    return response.json();
-  })
-  .then(data => console.log('Success:', data))
-  .catch((error) => console.error('Error:', error));
-}
+  
 
   google.accounts.id.renderButton(
     document.getElementById("auth"),

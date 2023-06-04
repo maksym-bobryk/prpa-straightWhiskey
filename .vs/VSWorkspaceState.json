@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\PRPA",
+    "\\PRPA\\Models"
   ],
-  "SelectedNode": "\\PRPA.sln",
+  "SelectedNode": "\\PRPA\\Models\\User.cs",
   "PreviewInSolutionExplorer": false
 }
