@@ -29,7 +29,6 @@ namespace PRPA.Repositories
             return _context.User.Where(x => x.Email == email).Include(b => b.Role).FirstOrDefault();
         }
 
-
         public void Add(User entity)
         {
             _context.User.Add(entity);

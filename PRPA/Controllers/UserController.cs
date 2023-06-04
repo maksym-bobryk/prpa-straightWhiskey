@@ -9,10 +9,12 @@ namespace PRPA.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserRepository _userRepos;
-         
-        public UserController(IUserRepository userRepos)
+        private readonly IRoleRepository _roleRepos;
+
+        public UserController(IUserRepository userRepos, IRoleRepository roleRepos)
         {
             this._userRepos = userRepos;
+            this._roleRepos = roleRepos;
         }
 
         // GET: api/<UserController>
@@ -89,11 +91,15 @@ namespace PRPA.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] User user)
         {
-/*            if(user.UserId < 0)
+            if(_roleRepos.Get(user.Role.RoleId) != null)
             {
-                return NotFound();
-            }*/
-
+                var role = _roleRepos.Get(user.Role.RoleId);
+                user.Role = role;
+            }
+            else
+            {
+                user.Role.RoleId = 0;
+            }
             _userRepos.Add(user);
 
             return CreatedAtAction(nameof(Get), new { userId = user.UserId }, user);
