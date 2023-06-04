@@ -388,7 +388,7 @@ a {
   justify-items: center;
   align-items: center;
   margin: 0 auto;
-  width: 60%;
+  width: 63%;
   background-color: #fff;
   border-radius: 30px;
 }
@@ -422,15 +422,15 @@ a {
   font-size: 30px;
   font-weight: 700;
 }
-.appointment__subtitle {
-  font-size: 24px;
-  width: 100px;
-}
 .appointment__subtitle--grid {
   grid-row-start: 1;
   grid-row-end: 2;
   grid-column-start: 3;
   grid-column-end: 6;
+  font-size: 28px;
+}
+.appointment__date {
+  font-family: inherit;
 }
 .appointment__total {
   grid-row-start: 4;
@@ -439,20 +439,25 @@ a {
   grid-column-end: 6;
   font-size: 32px;
 }
+.appointment__select {
+  font-family: inherit;
+  width: 85px;
+}
 .appointment__info {
   display: flex;
-  gap: 28px;
+  justify-content: space-between;
+  gap: 20px;
   font-size: 24px;
 }
 .appointment__info--email {
-  width: 300px;
+  width: 235px;
   grid-row-start: 2;
   grid-row-end: 3;
   grid-column-start: 2;
   grid-column-end: 5;
 }
 .appointment__info--name {
-  width: 300px;
+  width: 235px;
   grid-row-start: 3;
   grid-row-end: 4;
   grid-column-start: 2;
@@ -462,7 +467,7 @@ a {
   grid-row-start: 2;
   grid-row-end: 3;
   grid-column-start: 5;
-  grid-column-end: 7;
+  grid-column-end: 8;
 }
 
 /*# sourceMappingURL=style.css.map */

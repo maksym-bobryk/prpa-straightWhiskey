@@ -36,7 +36,7 @@ fetch('https://localhost:7061/api/Barber/')
     localStorage.setItem('userEmail', userObject.email);
     localStorage.setItem('userPic', userObject.picture);
     
-    // window.location.href = './profile.html';let newUser = {
+    window.location.href = './profile.html';
       let newUser = {
       "Email": userObject.email,
       "Name": userObject.name,
