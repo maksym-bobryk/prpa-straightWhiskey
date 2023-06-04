@@ -4,15 +4,61 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./images/Group.svg">
+  <link rel="stylesheet" href="./styles/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
   <title>Profile</title>
 </head>
-<body>
-  <h1>Profile</h1>
-  <h2 id="email">Your email is:</h2>
-  <h2 id="name">Your name is:</h2>
-  <img id="image" src="">
-  <button onclick="logout()">Logout</button>
+<body class="page__body">
   
+  <div class="top-actions">
+    <div class="top-actions__container">
+      <a href="index.html" class="logo">
+        <img
+        class="logo__image"
+        src="../src/images/Group.svg"
+        alt="Bose"
+        >
+      </a>
+    </div>
+
+    <div class="profile__title">Profile</div>
+    
+    <div class="top-actions__auth">
+      <a href="./index.html" class="icon" id="profile">
+        <img
+          class="top-actions__login"
+          src="../src/images/return.svg"
+          alt="return"
+          >
+      </a>
+
+    </div>
+  </div>
+
+  <section class="profile">
+    <div class="profile__grid">
+      <img class="profile__image" id="image" src="">
+      
+      <div class="profile__info profile__info--email">
+        <div class="profile__subtitle">Email:</div>
+        <h2 class="profile__email" id="email"></h2>
+      </div>
+      
+      <div class="profile__info  profile__info--name">
+        <div class="profile__subtitle">Name:</div>
+        <h2 class="profile__name" id="name"></h2>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    Staight Whiskey
+  </footer>
+
   <script src="profile.js"></script>
 </body>
 

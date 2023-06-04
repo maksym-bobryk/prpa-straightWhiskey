@@ -1,0 +1,76 @@
+.profile {
+  font-family: "Libre Baskerville", serif;
+  
+  margin-top: 40px;
+  height: calc(100vh - 190px - 94px);
+
+  margin-bottom: 20px;
+
+
+  &__grid {
+    display: grid;
+    grid-template-rows: repeat(4, 100px);
+    grid-template-columns: repeat(7, 100px);
+    justify-content: center;
+
+    justify-items: center;
+    align-items: center;
+   
+    margin: 0 auto;
+    width: 60%;
+    
+    background-color: #fff;
+    border-radius: 30px;
+  }
+
+  &__title {
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    grid-column-start: 3;
+    grid-column-end: 6;
+
+    color: #bebbba;
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  &__image {
+    display: inline;
+    grid-row-start: 2;
+    grid-row-end: 4;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+  }
+
+  &__subtitle {
+    font-size: 20px;
+  }
+
+  &__info {
+
+    &--email {
+      width: 300px;
+      grid-row-start: 2;
+      grid-row-end: 3;
+  
+      grid-column-start: 4;
+      grid-column-end: 7;
+    }
+
+    &--name {
+      width: 300px;
+      grid-row-start: 3;
+      grid-row-end: 4;
+  
+      grid-column-start: 4;
+      grid-column-end: 7;
+    }
+  }
+
+}
