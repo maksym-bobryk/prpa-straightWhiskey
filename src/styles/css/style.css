@@ -66,6 +66,15 @@ a {
   column-gap: 40px;
   justify-content: center;
 }
+.barbers__section-title {
+  padding-top: 80px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  text-align: center;
+  letter-spacing: -1.5px;
+  color: #fff;
+}
 
 .barber {
   display: flex;
@@ -269,6 +278,7 @@ a {
 }
 
 .top-actions {
+  font-family: "Libre Baskerville", serif;
   position: sticky;
   top: 0px;
   background-color: #17120d;
@@ -290,17 +300,78 @@ a {
   width: 50px;
   height: 50px;
 }
+.top-actions__auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
 
 .footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
+  height: 150px;
   background-color: #17120D;
   background-size: cover;
   background-position: center;
   font-size: 20px;
   color: #bebbba;
+}
+
+.profile {
+  font-family: "Libre Baskerville", serif;
+  margin-top: 40px;
+  height: calc(100vh - 190px - 94px);
+  margin-bottom: 20px;
+}
+.profile__grid {
+  display: grid;
+  grid-template-rows: repeat(4, 100px);
+  grid-template-columns: repeat(7, 100px);
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 60%;
+  background-color: #fff;
+  border-radius: 30px;
+}
+.profile__title {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 3;
+  grid-column-end: 6;
+  color: #bebbba;
+  font-size: 30px;
+  font-weight: 700;
+}
+.profile__image {
+  display: inline;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+}
+.profile__subtitle {
+  font-size: 20px;
+}
+.profile__info--email {
+  width: 300px;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 4;
+  grid-column-end: 7;
+}
+.profile__info--name {
+  width: 300px;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 4;
+  grid-column-end: 7;
 }
 
 /*# sourceMappingURL=style.css.map */
