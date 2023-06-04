@@ -26,7 +26,7 @@ namespace PRPA.Repositories
 
         public User Get(string email)
         {
-            return _context.User.Where(x => x.Email == email).FirstOrDefault();
+            return _context.User.Where(x => x.Email == email).Include(b => b.Role).FirstOrDefault();
         }
 
 
