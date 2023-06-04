@@ -16,7 +16,7 @@ namespace PRPA.Repositories
 
         public IEnumerable<Barber> GetAll()
         {
-            return _context.Barber.Include(b => b.User).ToList();
+            return _context.Barber.Include(b => b.User).ThenInclude(b => b.Role).ToList();
         }
 
         public Barber Get(int id)
