@@ -9,6 +9,16 @@ fetch('https://localhost:7061/api/User/')
     console.error(error);
   });
 
+fetch('https://localhost:7061/api/Barber/')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    user = { ...data[0] };
+    console.error(error);
+  });
+
 
 
   google.accounts.id.initialize({

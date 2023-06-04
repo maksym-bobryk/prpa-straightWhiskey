@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/css/style.css">
+  <title>Enroll</title>
+</head>
+<body class="page__body">
+  <div class="top-actions">
+    <div class="top-actions__container">
+      <a href="index.html" class="logo">
+        <img
+        class="logo__image"
+        src="../src/images/Group.svg"
+        alt="Bose"
+        >
+      </a>
+    </div>
+
+    <div class="appointment__title">Enroll</div>
+    
+    <div class="top-actions__auth">
+      <a href="./index.html" class="icon" id="appointment">
+        <img
+          class="top-actions__login"
+          src="../src/images/return.svg"
+          alt="return"
+          >
+      </a>
+
+    </div>
+  </div>
+
+  <section class="appointment">
+    <form>
+      <div class="appointment__grid">
+        <h2 class="appointment__subtitle--grid" id="email">Choose service</h2>
+  
+  
+        <div class="appointment__info appointment__info--email">
+          <div class="appointment__subtitle">Services:</div>
+          <h2 class="appointment__email" id="email"></h2>
+          <select id="services"></select>
+        </div>
+        
+        <div class="appointment__info  appointment__info--name">
+          <div class="appointment__subtitle">Barbers:</div>
+          <h2 class="appointment__name" id="name"></h2>
+          <select id="barbers"></select>
+        </div>
+
+        <div class="appointment__info appointment__info--date">
+          <label for="start">Date:</label>
+  
+          <input class="appointment__date" id="datefield"  type="datetime-local" min='1899-01-01' max='2000-13-13'></input>
+        </div>
+  
+
+        <p class="appointment__total" id="selectedService"></p>
+      
+        <button type="submit" class="appointment__enroll">Enroll</button>
+    </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    Staight Whiskey
+  </footer>
+
+  
+  <script src="./appointment.js"></script>
+</body>
+</html>

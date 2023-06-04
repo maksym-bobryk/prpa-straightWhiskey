@@ -1,0 +1,118 @@
+.appointment {
+  font-family: "Libre Baskerville", serif;
+  
+  margin-top: 40px;
+  height: calc(100vh - 190px - 94px);
+
+  margin-bottom: 20px;
+
+
+  &__grid {
+    display: grid;
+    grid-template-rows: repeat(5, 100px);
+    grid-template-columns: repeat(7, 100px);
+    justify-content: center;
+
+    justify-items: center;
+    align-items: center;
+   
+    margin: 0 auto;
+    width: 60%;
+    
+    background-color: #fff;
+    border-radius: 30px;
+  }
+
+  &__date {
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    grid-column-start: 5;
+    grid-column-end: 7;
+
+  }
+
+  &__enroll {
+    grid-row-start: -1;
+    grid-row-end: -2;
+
+    grid-column-start: 3;
+    grid-column-end: 6;
+
+    font-family: inherit;
+    padding: 20px 50px;
+
+    color: #bebbba;
+    background-color: rgba(41,39,39, 0.9);
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 2px solid #bebbba;
+    transition: 0.3s;
+
+    &:hover {
+      color: #423025;
+      background-color: #d9d9d9;
+    }
+  }
+
+  &__title {
+    color: #bebbba;
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    width: 100px;
+
+    &--grid {
+      grid-row-start: 1;
+      grid-row-end: 2;
+  
+      grid-column-start: 3;
+      grid-column-end: 6;
+    }
+  }
+
+  &__total {
+    grid-row-start: 4;
+    grid-row-end: 5;
+
+    grid-column-start: 3;
+    grid-column-end: 6;
+
+    font-size: 32px;
+  }
+
+  &__info {
+    display: flex;
+    gap: 28px;
+    font-size: 24px;
+
+    &--email {
+      width: 300px;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      grid-column-start: 2;
+      grid-column-end: 5;
+    }
+
+    &--name {
+      width: 300px;
+      grid-row-start: 3;
+      grid-row-end: 4;
+  
+      grid-column-start: 2;
+      grid-column-end: 5;
+    }
+
+    &--date {
+      grid-row-start: 2;
+      grid-row-end: 3;
+
+      grid-column-start: 5;
+      grid-column-end: 7; 
+    }
+  }
+}
