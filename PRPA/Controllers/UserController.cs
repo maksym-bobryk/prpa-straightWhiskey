@@ -111,9 +111,9 @@ namespace PRPA.Controllers
             }
 
             user.Email = updatedUser.Email;
-            user.Password = updatedUser.Password;
+            //user.Password = updatedUser.Password;
             user.Name = updatedUser.Name;
-            user.Phone = updatedUser.Phone;
+            //user.Phone = updatedUser.Phone;
             user.Photo = updatedUser.Photo;
             user.Role = updatedUser.Role;
 
