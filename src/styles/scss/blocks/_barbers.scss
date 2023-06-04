@@ -1,0 +1,11 @@
+.barbers {
+  &__container {
+    padding: 30px 35px;
+    display: grid;
+    grid-template-columns: repeat(3, $card-size);
+  
+    row-gap: 30px;
+    column-gap: 40px;
+    justify-content: center;
+  }
+}

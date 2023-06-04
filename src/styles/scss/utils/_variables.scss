@@ -9,3 +9,9 @@ $headerBottomPaddingDesktop: 64px;
 
 $color: #e8eff9;
 $color-black: #292929;
+
+$card-size: 320px;
+$rank-size: 32px;
+$rank-padding: 10px;
+$rank-bottom-position: calc((50% - $rank-size) /2 );
+$rank-left-position: calc(100% - $rank-size - $rank-padding);

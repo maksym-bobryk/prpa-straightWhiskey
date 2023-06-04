@@ -1,0 +1,51 @@
+.barber {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px 0;
+  overflow: hidden;
+
+  transition: transform 1s;
+
+  &:hover {
+
+    transform: scale(1.2);
+    transition: transform 1s;
+
+    & .person__extra {
+      display: block;
+    }
+
+    & .person__portrait {
+      transition: border-radius 1s;
+    }
+  }
+
+  &__portrait{
+    width: $card-size;
+    height: $card-size;
+    border-radius: 10px;
+    transition: border-radius 1s;
+  }
+
+  &__photo {
+    position: relative;
+    margin-bottom: 8px;
+  }
+  
+  &__name {
+    display: block;
+    position: absolute;
+    margin-bottom: 9px;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #fff;
+
+    transform: translate(10px,-200%);
+  }
+}

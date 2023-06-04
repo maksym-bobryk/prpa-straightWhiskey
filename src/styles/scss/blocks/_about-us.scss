@@ -1,0 +1,50 @@
+.about-us {
+  &__title {
+    margin-bottom: 40px;
+    padding: 0;
+
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+
+    text-align: center;
+    letter-spacing: -1.5px;
+
+    color: #fff;
+
+
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+  }
+
+  &__text {
+    width: 500px;
+    color: #fff;
+  }
+
+  &__picture {
+    &-first {
+      width: 369px;
+      height: 226px;
+    }
+
+    &-second {
+      width: 469px;
+      height: 245px;
+    }
+
+    &-third {
+      width: 380px;
+      height: 243px;
+    }
+  }
+
+  &__poor {
+    height: 100px;
+  }
+}
