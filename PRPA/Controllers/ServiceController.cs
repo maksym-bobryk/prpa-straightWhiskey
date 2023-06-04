@@ -47,11 +47,7 @@ namespace PRPA.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] Service service)
         {
-            if (service.ServiceId < 0)
-            {
-                return NotFound();
-            }
-
+            service.Appointments = new List<Appointment>();
             _serviceRepos.Add(service);
 
             return CreatedAtAction(nameof(Get), new { userId = service.ServiceId }, service);
